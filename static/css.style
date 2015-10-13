@@ -1,0 +1,46 @@
+body {
+	background-image: url("A.jpg");
+	position: fixed; 
+  	top: 0; 
+  	left: 0; 
+	
+  /* Preserve aspet ratio */
+  	min-width: 100%;
+  	min-height: 100%;
+	background-size: 100%;
+ 	background-color: #cccccc;
+}
+
+h1 {
+    color: #6A5ACD;
+    text-align: center; 
+}
+
+h1 {
+    border: 5px solid #800000;
+}
+
+h2 {
+    color: #6A5ACD;
+    text-align: center; 
+}
+
+h2 {
+    border: 5px solid #800000;
+}
+
+.main {
+    width: 600px;
+    margin: auto;
+}
+
+form input[type=text] {
+    width: 100%;
+    margin-top: 5px;
+    line-height: 20px;
+}
+form input[type=submit] {
+    margin-top: 5px;
+    position: relative;
+    float: left;
+}
