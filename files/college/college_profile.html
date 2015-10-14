@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>College List</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+
+        <div class="box">
+            <h1><small><strong>College Profile</strong></small></h1>
+            <form id="form_col" action="/college/page/{{college.key.id()}}" method="post">
+               <div class="profile_details"><p class="label">College Name: </p><input type="text" name="c_name" value="{{college.clge_name}}"></input></div>
+                <input type="submit" class="btn btn-primary" value"Submit">
+            </form>
+            <a href="/college/delete/{{college.key.id()}}"><button class="btn btn-secondary" style="display:inline">Delete</button></a>
+            <a href="/"><button class="btn" style="display:inline">Cancel</button></a>
+        </div>
+
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+
+    </body>
+</html>
