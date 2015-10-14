@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <h1><title>Online Thesis Database</title></h1>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <div class="navbar-header">
+               <h3><font color="black" >HOME PAGE</h3>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="navbar-right"> <background color="white">
+                    <background color="white" p class="welcome"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+                </div>
+                <div class="divider navbar-right">_______________________________________________________</div>
+                <div class="navbar-right">
+                    <p class="welcome">Hello! {{user.nickname()}} </p>
+                </div>
+            </div>
+       
+        <input type="search" id="searcher" placeholder="Find thesis or student">
+        <button class="primary-btn btn" id="search_btn">Search</button>
+        <div id='rel_th_container' class='list-inline'>
+            <ul id='searched' style='list-style-type:none'>
+
+            </ul>
+        </div>
+
+        <div>
+        	<a>|||||||||||||||CREATE|||||||||||||||||  </a><br>
+            <div><a href="/thesis/create"><button class="btn-primary btn">Create Thesis</button></a><a>   </a><a href="/faculty/create"><button class="btn-primary btn">Create Faculty</button></a><a>   </a><a href="/student/create"><button class="btn-primary btn">Create Student</button></a></div>
+            <div><a href="/university/create"><button class="btn-primary btn">Create University</button></a><a>   </a><a href="/college/create"><button class="btn-primary btn">Create College</button></a><a>   </a><a href="/department/create"><button class="btn-primary btn">Create Department</button></a></div><br>
+            <a>||||||||||||||||LIST|||||||||||||||||||  </a><br>
+            <div><a href="/thesis/list"><button class="btn-primary btn">List Thesis</button></a><a>   </a><a href="/faculty/list"><button class="btn-primary btn">List Faculty</button></a><a>   </a><a href="/student/list"><button class="btn-primary btn">List Student</button></a></div>
+            <div><a href="/university/list"><button class="btn-primary btn">List University</button></a><a>   </a><a href="/college/list"><button class="btn-primary btn">List College</button></a></div><br>
+  			<a>||||||||||||||||IMPORT|||||||||||||||||  </a><br>
+            <form action="/csvimport" method="post">
+                <input type="file" name="csv_name" class="form-control"><a> </a><button class="btn-primary btn">CSV import</button>
+            </form><br>
+            
+        </div>
+
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+    </body>
+</html>
