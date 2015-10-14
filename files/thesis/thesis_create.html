@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Thesis Create</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+        <div><a href="/"><button class="primary-btn btn">Back to Home Page</button></a></div><br>
+
+    
+        <input type="search" id="searcher" placeholder="Find thesis or student">
+        <button class="primary-btn btn" id="search_btn">Search</button>
+        <div id='rel_th_container' class='list-inline'>
+            <ul id='searched' style='list-style-type:none'>
+
+            </ul>
+        </div>
+
+        <div class="form-group create">
+            <form id="form1">
+                <h2><strong>Submit New Thesis</strong><h2><hr>
+                <h3><small><strong> University</small></h3>
+                <input type="text" class="form-control" name="university"></input>
+                <h3><small><strong> College</strong></small></h3>
+                <input type="text" class="form-control" name="college" ></input>
+                <h3><small><strong> Department</strong></small></h3>
+                <input type="text" class="form-control" name="department" ></input>
+                <h3><small><strong> Title</strong></small></h3>
+                <input type="text" class="form-control" name="thesis_title" required></input>
+                <h3><small><strong> Adviser</strong></small></h3>
+                 <input type="text" class="form-control" name="thesis_adviser"  required></input>
+                <h3><small><strong>Thesis Proponents</strong></small></h3>
+                <input type="text" class="form-control" name="thesis_member1"  required></input>
+                <input type="text" class="form-control" name="thesis_member2" ></input>
+                <input type="text" class="form-control" name="thesis_member3" ></input>
+                <input type="text" class="form-control" name="thesis_member4" ></input>
+                <input type="text" class="form-control" name="thesis_member5" ></input>
+                <div class="block">
+                    <h3><small><strong>Year<strong></small></h3>
+                    <select name="thesis_year" class="form-control selection" form="form1" required>
+                        <option selected disabled value="">Year</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <h3><small><strong>Section</strong></small></h3>
+                    <select name="thesis_section" form="form1" class="form-control selection" required>
+                        <option selected disabled value="">Section</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="abs_block">
+                <h3><small><strong>Thesis abstract</strong></small></h3>
+                <textarea name="thesis_abstract" class="form-control" cols="100" rows="22" form="form1" required></textarea>
+                <input type="submit" class="btn btn-primary" value="Create">
+                </div>
+            </form>
+        </div>
+        <div><a href="/"><button class="btn btn-danger">Cancel</button></a></div>
+
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+    </body>
+</html>
