@@ -1710,7 +1710,7 @@ app = webapp2.WSGIApplication([
     ('/university/delete/(.*)', DeleteUniversity),
     ('/faculty/list', ListFaculty),
     ('/student/list', ListStudent),
-    ('/student/list/all', ListAllStudent),
+    ('/thesis/list/all', ThesisListAll),
     ('/university/list', ListUniversity),
     ('/college/list', ListCollege),
     ('/student/page/(.*)', StudentPage),
