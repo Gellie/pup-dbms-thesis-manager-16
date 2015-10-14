@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>University Create</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+        <div><a href="/"><button class="primary-btn btn">Back to Home Page</button></a></div><br>
+
+        <div class="box">
+            <h1><small><strong>Create University</strong></small></h1>
+            <form id="univ_create">
+                <div class="profile_details"><p class="label">University: </p><input type="text" name="university_name" placeholder="Enter university name"></input></div>
+
+                <input type="submit" class="btn btn-primary" value"Submit">
+            </form>
+            <a href="/"><button class="btn btn-secondary" style="display:inline">Cancel</button></a>
+        </div>
+        
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+
+    </body>
+</html>
