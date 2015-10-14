@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Student List</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+
+        <div><a href="/"><button class="primary-btn btn">Back to Home Page</button></a></div><br>
+
+        <input type="search" id="searcher" placeholder="Find thesis or student">
+        <button class="primary-btn btn" id="search_btn">Search</button>
+        <div id='rel_th_container' class='list-inline'>
+            <ul id='searched' style='list-style-type:none'>
+
+            </ul>
+        </div>
+        <h3><strong>Student List</strong></h3><hr>
+        <h1 class="list_label">|| Name || Email ||</h1>
+        <ul class="student-list">
+            {% for s in student%}
+                <li>   {{s.stud_lname}} {{s.stud_fname}} {{s.stud_mname}} -  {{s.stud_email}}<a class="btn-primary" href='/student/page/{{s.key.id()}}'><a>  </a><button class="btn-primary btn">View Details</button></a></li>
+            {% endfor %}
+        </ul>
+
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+    </body>
+</html>
