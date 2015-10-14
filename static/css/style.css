@@ -1,0 +1,28 @@
+body {
+    
+    background-image: url(bg1.jpg);
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+.main {
+    width: 600px;
+    margin: auto;
+}
+
+form input[type=text] {
+    width: 25%;
+    margin-top: 5px;
+    line-height: 20px;
+}
+form input[type=submit] {
+    margin-top: 5px;
+    position: relative;
+    float: left;
+}
