@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>University Profile</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+
+        <div class="box">
+            <h1><small><strong>University Profile</strong></small></h1>
+            <form id="form_univ" action="/university/page/{{university.key.id()}}" method="post">
+               <div class="profile_details"><p class="label">University Name: </p><input type="text" name="univ_name" value="{{university.univ_name}}"></input></div>
+                <div class="profile_details"><p class="label">Campus/Branch: </p><input type="text" name="univ_initl" value="{{university.univ_initl}}"></input></div>
+                <div class="profile_details"><p class="label">Address: </p><input type="text" name="univ_add" value="{{university.univ_add}}"></input></div><br>
+                <input type="submit" class="btn btn-primary" value"Submit">
+            </form>
+            <br><a href="/university/delete/{{university.key.id()}}"><button class="btn btn-secondary" style="display:inline">Delete</button></a>
+            <a href="/"><button class="btn" style="display:inline">Cancel</button></a>
+        </div>
+        
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/laodjs.js"></script>
+    </body>
+</html>
