@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Thesis List All</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+
+        <div><a href="/"><button class="primary-btn btn">Back to Home Page</button></a></div><br>
+
+        
+
+        <input type="search" id="searcher" placeholder="Find thesis or student">
+        <button class="primary-btn btn" id="search_btn">Search</button>
+        <div id='rel_th_container' class='list-inline'>
+            <ul id='searched' style='list-style-type:none'>
+
+            </ul>
+        </div>
+
+        <h1><small><strong>Thesis Filters:</strong></small></h1>
+        <div class="form-group filt">
+            <select id="filter_year" class="form-control">
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>  
+                <option value="2015">2015</option>
+                <option selected disabled value="">Year</option>
+            </select>
+        </div>
+        <div class="form-group filt">
+            <select id="filter_adviser" class="form-control">
+                <option selected disabled value="">Adviser</option>
+                {% for f in faculty%}
+                <option value="{{f.fac_fname}} {{f.fac_lname}}">{{f.fac_fname}} {{f.fac_lname}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group filt">
+            <select id="filter_university" class="form-control">
+                <option selected disabled value="">University</option>
+                {% for u in universities%}
+                <option value="{{u.univ_name}}">{{u}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <h1>Found Matches</h1>
+        <button class="danger-btn btn" id="list_thesis">List</button>
+
+        <h3 class="list_label">|| Year || Thesis title || Adviser || Author ||</h3>
+        <ul class="thesis_list">
+        </ul>
+
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+
+    </body>
+</html>
