@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Student Profile</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+
+        <div class="box">
+            <h1><small><strong>Student Profile</strong></small></h1>
+            <form id="form_stud" action="/student/page/{{student.key.id()}}" method="post">
+                <div class="profile_details"><p class="label">First name: </p><input type="text" name="stud_fname" value="{{student.stud_fname}}"></input></div>
+                <div class="profile_details"><p class="label">Middle name: </p><input type="text" name="stud_mname" value="{{student.stud_mname}}"></input></div>
+                <div class="profile_details"><p class="label">Last name: </p><input type="text" name="stud_lname" value="{{student.stud_lname}}"></input></div>
+                <div class="profile_details"><p class="label">Student number: </p><input type="text" name="stud_snum" value="{{student.stud_snum}}"></input></div>
+                <div class="profile_details"><p class="label"> E-mail: </p><input type="text" name="stud_email" value="{{student.stud_email}}"></input></div>
+                <div class="profile_details"><p class="label">Contact number: </p><input type="text" name="stud_pnum" value="{{student.stud_pnum}}"></input></div>
+                <div class="profile_details"><p class="label">Birthday: </p><input type="text" name="stud_bdate" value="{{student.stud_bdate}}"></input></div><br>
+                
+                
+                <input type="submit" class="btn btn-primary" value"Submit">
+            </form>
+            <a href="/student/delete/{{student.key.id()}}"><button class="btn btn-secondary" style="display:inline">Delete</button></a><br>
+            <a href="/"><button class="btn btn-secondary" style="display:inline">Cancel</button></a>
+        </div>
+
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+    </body>
+</html>
