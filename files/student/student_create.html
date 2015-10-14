@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Student Create</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+            <a class="navbar-brand"><h2>Online Thesis Database</h2></a>
+</div>
+
+        <p class="welcome">Hello! Welcome {{user.nickname()}} </p><br>
+        <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+        <div><a href="/"><button class="primary-btn btn">Back to Home Page</button></a></div><br>
+
+        <div class="box">
+            <h1><small><strong>Create Student</strong></small></h1>
+            <form id="stud_create">
+                <div class="profile_details"><p class="label">First name: </p><input type="text" name="stud_fname"></input></div>
+                <div class="profile_details"><p class="label">Middle name: </p><input type="text" name="stud_mname"></input></div>
+                <div class="profile_details"><p class="label">Last name: </p><input type="text" name="stud_lname"></input></div>
+                <div class="profile_details"><p class="label">Student number: </p><input type="text" name="stud_snum"></input></div>
+                <div class="profile_details"><p class="label"> E-mail: </p><input type="text" name="stud_email"></input></div>
+                <div class="profile_details"><p class="label">Contact number: </p><input type="text" name="stud_pnum"></input></div>
+                <div class="profile_details"><p class="label">Birthday: </p><input type="date" name="stud_bdate"></input></div><br>
+                
+                <input type="submit" class="btn btn-primary" value"Submit">
+            </form>
+            <a href="/"><button class="btn btn-secondary" style="display:inline">Cancel</button></a>
+        </div>
+
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="/static/js/loadjs.js"></script>
+    </body>
+</html>
